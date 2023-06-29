@@ -1,0 +1,281 @@
+.main {
+  width: 100%;
+  padding-bottom: 10px;
+  .header {
+    background: #f7e7ce 0% 0% no-repeat padding-box;
+    // border: 1px solid #707070;
+    padding: 30px 50px 0;
+    .banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      img {
+        width: 40%;
+        height: 70vh;
+        object-fit: fill;
+        // border: 1px solid black;
+        border-style: none;
+      }
+    }
+  }
+
+  .couture {
+    padding: 30px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      img {
+        width: 70%;
+        object-fit: fill;
+      }
+    }
+    .text {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font: normal normal normal 2rem "Lato";
+      letter-spacing: 0px;
+      color: #713c25;
+      text-align: left;
+      width: 65%;
+      p {
+        width: 70%;
+      }
+    }
+    .collection {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        img {
+          width: 70%;
+          object-fit: fill;
+        }
+      }
+    }
+    .collection-action {
+      margin: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .browse-collection-button {
+        padding: 10px;
+        border: 2px solid #653b29;
+        background-color: inherit;
+        font-size: 0.75rem;
+        min-width: max-content;
+        max-width: 200px;
+        text-align: left;
+        font: normal normal 300 0.75rem Lato;
+        color: #853818;
+        border-radius: 2px;
+      }
+    }
+  }
+  .shutterstock {
+    background: transparent url("../../public/images/realwomendekstop.png") 0%
+      0% no-repeat padding-box;
+    background-size: cover;
+    width: 100%;
+    padding-block: 15%;
+    display: flex;
+    .content {
+      margin-left: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      .craftsmanship {
+        align-self: flex-start;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        .craftsmanship-box {
+          width: 20px;
+          height: 20px;
+          background: #be6c42 0% 0% no-repeat padding-box;
+        }
+        .craftsmanship-text {
+          font: normal normal medium 16px/21px Gilroy;
+          letter-spacing: 5.76px;
+          color: #713c25;
+          text-transform: uppercase;
+        }
+      }
+      .shutterstock-text {
+        padding-left: 10px;
+        width: 50%;
+        text-align: left;
+        font: normal normal normal 7rem Apparel Display;
+        letter-spacing: 0px;
+        color: #713c25;
+      }
+      .shutterstock-action-container {
+        width: 50%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        .shutterstock-action-button-container {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-end;
+          .shutterstock-action-button-text {
+            width: 50%;
+            text-align: right;
+            font: normal normal normal 0.6rem Lato;
+            letter-spacing: 0px;
+            color: #713c25;
+          }
+          .shutterstock-action {
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .shutterstock-action-button {
+              padding: 10px;
+              border: 2px solid #653b29;
+              background-color: inherit;
+              font-size: 0.5rem;
+              max-width: 200px;
+              text-align: left;
+              font: normal normal 300 0.75rem Lato;
+              color: #853818;
+              border-radius: 2px;
+            }
+          }
+        }
+
+        .shutterstock-extra-text {
+          width: 50%;
+          text-align: left;
+          font: normal normal normal 2rem Apparel Display It;
+          letter-spacing: 0px;
+          color: #713c25;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .quote {
+    background: transparent url("../../public/images/Quote.png") 0% 0% no-repeat
+      padding-box;
+    background-size: cover;
+    padding-block-start: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .quote-text {
+      width: 70%;
+      text-align: center;
+      font: normal normal normal 4rem Lato;
+      letter-spacing: 0px;
+      color: #f7e7ce;
+    }
+    .author {
+      text-align: left;
+      font: normal normal normal 17px/27px Lato;
+      letter-spacing: 0px;
+      color: #f7e7ce;
+      opacity: 1;
+    }
+    .quote-symbol {
+      text-align: left;
+      font: normal normal normal 5rem Lato;
+      letter-spacing: 0px;
+      color: #f7e7ce;
+      opacity: 1;
+    }
+  }
+  .lookbook {
+    background: transparent url("../../public/images/lookbook.png") 0% 0%
+      no-repeat padding-box;
+    background-size: cover;
+    .lookbook-content {
+      padding-block: 27% 7%;
+      padding-inline: 10%;
+      .lookbook-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        .lookbook-text {
+          display: flex;
+          flex-direction: column;
+          .look,
+          .book {
+            text-align: left;
+            font: normal normal normal 10rem Lato;
+            letter-spacing: 0px;
+          }
+          .look {
+            color: #be6c42;
+          }
+          .book {
+            color: #853818;
+          }
+          .for {
+            color: #f7e7ce;
+            text-align: left;
+            font: normal normal normal 10rem san-serif;
+            letter-spacing: 0px;
+          }
+          .you {
+            text-align: right;
+            font: normal normal normal 80px/94px Lato;
+            letter-spacing: 0px;
+            color: #713c25;
+          }
+        }
+        .lookbook-logo-container {
+          width: 10%;
+          img {
+            width: 100%;
+          }
+          .lookbook-logo-text {
+            text-align: left;
+            font: normal normal normal 1rem Lato;
+            letter-spacing: 0px;
+            color: #713c25;
+          }
+        }
+      }
+    }
+    .lookbook-action {
+      padding: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .lookbook-button {
+        padding: 10px;
+        border: 2px solid #653b29;
+        background-color: inherit;
+        font-size: 0.5rem;
+        max-width: 200px;
+        text-align: left;
+        font: normal normal 300 0.75rem Lato;
+        color: #853818;
+        border-radius: 2px;
+      }
+    }
+  }
+  
+}

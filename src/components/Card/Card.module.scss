@@ -1,0 +1,24 @@
+.card {
+  max-width: 250px;
+  .card-image {
+    width: 100%;
+    img {
+      width: 100%;
+      aspect-ratio: 0.7;
+    }
+  }
+  .card-detail {
+    border: 1px solid #707070;
+    padding: 30px 20px;
+    .card-title {
+      text-align: left;
+      font: normal normal bold 1rem Lato;
+      color: #713c25;
+    }
+    .card-subtitle {
+      text-align: left;
+      font: normal normal normal 0.9rem Lato;
+      color: #713c25;
+    }
+  }
+}

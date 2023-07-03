@@ -1,17 +1,26 @@
 import styles from "./Header.module.scss";
 import shopzen from "@/public/images/shopzen.png";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 const Header = () => {
+  const  [isNavbarOpen, setIsNavbarOpen]  = useState(false);
   return (
     <>
       <nav className={styles.navbar}>
         <div>
-          <img src={shopzen.src} alt="shopzen logo" />
+          <Link href="/">
+            <img src={shopzen.src} alt="shopzen logo" />
+          </Link>
         </div>
         <div className={styles["navbar-actions"]}>
-          <div>Contact Us</div>
-          <div>Lookbook</div>
+          <div>
+            <Link href="/contactus">Contact Us</Link>
+          </div>
+          <div>
+            <Link href="/lookbook">Lookbook</Link>
+          </div>
           <button className={styles["discover-more-button"]}>
             Discover more
           </button>
@@ -20,9 +29,16 @@ const Header = () => {
 
       <nav className={styles.mobilebar}>
         <div>
-          <img src={shopzen.src} alt="shopzen logo" />
+          <Link href="/">
+            <img src={shopzen.src} alt="shopzen logo" />
+          </Link>
         </div>
-        <div className={styles.hamburger}>
+        <div
+          className={styles.hamburger}
+          onClick={() => {
+            setIsNavbarOpen(true);
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="36"
@@ -38,10 +54,37 @@ const Header = () => {
           </svg>
         </div>
       </nav>
-      <div className={styles["navbar-mobile"]}>
-        <div className={styles.backdrop}></div>
-        <div className={styles.sidedrawer}></div>
-      </div>
+      {isNavbarOpen && (
+        <div className={styles["navbar-mobile"]}>
+          <div className={styles.backdrop}>
+            <div
+              className={styles.close}
+              onClick={() => {
+                setIsNavbarOpen(false);
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                id="close"
+              >
+                <path d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path>
+              </svg>
+            </div>
+            <div className={styles["main-content"]}>
+              <div>
+                <Link href="/lookbook">Lookbook</Link>
+              </div>
+              <div>
+                <Link href="/contactus">Contact Us</Link>
+              </div>
+              <button className={styles["discover-more-button"]}>
+                Discover more
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

@@ -10,11 +10,15 @@ import collection2021 from "@/public/images/collection2021.png";
 import lookbook from "@/public/images/badge.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/router";
 export default function Home() {
+
+  const router = useRouter();
+
   return (
     <div className={styles.main}>
+      <Header />
       <div className={styles.header}>
-        <Header/>
         <div className={styles.banner}>
           <img src={banner.src} alt="For Every Woman Banner" />
         </div>
@@ -67,7 +71,7 @@ export default function Home() {
               </div>
               <div className={styles["shutterstock-action"]}>
                 <button className={styles["shutterstock-action-button"]}>
-                  Browse Collections
+                  Discover more
                 </button>
               </div>
             </div>
@@ -113,12 +117,12 @@ export default function Home() {
           </div>
         </div>
         <div className={styles["lookbook-action"]}>
-          <button className={styles["lookbook-button"]}>
+          <button className={styles["lookbook-button"]} onClick={()=>{router.push('/lookbook')}}>
             Check out our Lookbook
           </button>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

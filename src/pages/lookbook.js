@@ -66,8 +66,8 @@ const lookbook = () => {
             <div className={styles.subtitle}>Collection</div>
           </div>
           <div className={styles["collection-para"]}>
-            With the young leading the charge against giant corporations, the
-            appeal of small labels with big visions will only grow.
+            Unleash your inner fashionista, our collection is sublime, Elevate
+            your wardrobe with designs that truly shine.
           </div>
         </div>
         <div className={styles["collection-image"]}>
@@ -109,8 +109,8 @@ const lookbook = () => {
             <div className={styles.subtitle}>Collection</div>
           </div>
           <div className={styles["collection-para"]}>
-            With the young leading the charge against giant corporations, the
-            appeal of small labels with big visions will only grow.
+            Step into a world of fashion that's bold and chic, Find your
+            signature style with each unique boutique.
           </div>
         </div>
       </div>

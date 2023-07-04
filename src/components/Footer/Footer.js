@@ -20,35 +20,19 @@ const Footer = () => {
         <div className={styles.aboutus}>
           <div className={styles["aboutus-title"]}>About us</div>
           <div className={styles["aboutus-content"]}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-            dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-            dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-            justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-            takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
-            sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-            amet. Lorem.
+            Welcome to Shopzen, your online fashion store for women of every
+            shape and color. We celebrate diversity and offer a wide range of
+            styles to empower and inspire. Our collection is curated with
+            quality in mind, sourced from trusted suppliers. Shop with ease on
+            our user-friendly website, where detailed descriptions and accurate
+            sizing help you find your perfect fit. Experience exceptional
+            customer service as we value your satisfaction.
           </div>
         </div>
       </div>
       <div className={styles["footer-navbar"]}>
         <div className={styles.quicklinks}>Quick Links</div>
-        <div className={styles['quick-links-container']}>
+        <div className={styles["quick-links-container"]}>
           <div className={styles.link}>
             <Link href="/">Home</Link>
           </div>

@@ -68,8 +68,9 @@ export default function Home() {
         </div>
         <div className={styles.text}>
           <p>
-            With the young leading the charge against giant corporations, the
-            appeal of small labels with big visions will only grow.
+            Discover the latest trends, express your unique personality, and
+            find the perfect outfit for every occasion. With a wide range of
+            fashion-forward choices.
           </p>
         </div>
         {!mobileView && (
@@ -154,17 +155,18 @@ export default function Home() {
             <div className={styles["craftsmanship-text"]}>craftsmanship</div>
           </div>
           <div className={styles["shutterstock-text"]}>
-            Real women fashion state, insidious whispering of male
+            Unveiling Authenticity: Fashion that Celebrates Real Women
           </div>
           <div className={styles["shutterstock-action-container"]}>
             <div className={styles["shutterstock-action-button-container"]}>
               <div className={styles["shutterstock-action-button-text"]}>
-                Still, what we never reckoned with then was the notion that the
-                achievement of women designers today would amount to a reshaping
-                of the industry—not by fitting in with male-led corporate rules
-                but by steadily ignoring them, trusting their own instincts,
-                living how they wish, and opening wide the creative space for a
-                whole generation to thrive.
+                At our fashion-forward platform, we celebrate the achievements
+                of women designers who have challenged the status quo and paved
+                their own paths. They embody a spirit of fearlessness, breaking
+                free from the constraints imposed by traditional rules. By
+                embracing their unique visions and forging their own way, these
+                designers have revolutionized the industry, offering fresh
+                perspectives and inspiring countless others.
               </div>
               <div className={styles["shutterstock-action"]}>
                 <button className={styles["shutterstock-action-button"]}>
@@ -173,16 +175,17 @@ export default function Home() {
               </div>
             </div>
             <div className={styles["shutterstock-extra-text"]}>
-              They're defying the norm and redefining what it means to be
-              beautiful.
+              They're breaking boundaries and revolutionizing our perception of
+              beauty.
             </div>
           </div>
         </div>
       </div>
       <div className={styles.quote}>
         <div className={styles["quote-text"]}>
-          I think there is beauty in everything. What 'normal' people perceive
-          as ugly, I can usually see something of beauty in it.
+          I hold the belief that beauty exists in everything. Even in what many
+          consider to be ordinary or unattractive, I possess the ability to
+          uncover elements of beauty that often go unnoticed by others.
         </div>
         <div className={styles["author"]}>Alexander McQueen; designer</div>
         <div className={styles["quote-symbol"]}>"</div>

@@ -11,9 +11,48 @@ import lookbook from "@/public/images/badge.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
+import { useEffect, useRef, useState } from "react";
 export default function Home() {
-
   const router = useRouter();
+  const [mobileView, setMobileView] = useState(false);
+  const carousel = useRef();
+
+  useEffect(() => {
+    if (window.innerWidth < 500) {
+      setMobileView(true);
+    } else {
+      setMobileView(false);
+    }
+    const setDisplay = () => {
+      if (window.innerWidth < 768) {
+        setMobileView(true);
+      } else {
+        setMobileView(false);
+      }
+    };
+    window.addEventListener("resize", setDisplay);
+    return () => window.removeEventListener("resize", setDisplay);
+  }, []);
+
+  const scroll = (direction) => {
+    if (
+      direction === "right" &&
+      carousel.current.scrollLeft <= carousel.current.scrollWidth
+    ) {
+      if (carousel.current.scrollLeft + 185 <= 371) {
+        carousel.current.scrollLeft += 185;
+      }else{
+        carousel.current.scrollLeft = 371;
+      }
+    }
+    if (direction === "left" && carousel.current.scrollLeft > 0) {
+      if (carousel.current.scrollLeft - 185 >= 0) {
+        carousel.current.scrollLeft -= 185;
+      } else {
+        carousel.current.scrollLeft = 0;
+      }
+    }
+  };
 
   return (
     <div className={styles.main}>
@@ -33,17 +72,75 @@ export default function Home() {
             appeal of small labels with big visions will only grow.
           </p>
         </div>
-        <div className={styles.collection}>
-          <div className={`${styles.banner}`}>
-            <img src={collection2019.src} alt="collection 2019" />
+        {!mobileView && (
+          <div className={styles.collection}>
+            <div className={`${styles.banner}`}>
+              <img src={collection2019.src} alt="collection 2019" />
+            </div>
+            <div className={styles.banner}>
+              <img src={collection2020.src} alt="collection 2020" />
+            </div>
+            <div className={styles.banner}>
+              <img src={collection2021.src} alt="collection 2021" />
+            </div>
           </div>
-          <div className={styles.banner}>
-            <img src={collection2020.src} alt="collection 2020" />
+        )}
+        {mobileView && (
+          <div className={styles["collection-carousel"]}>
+            <div
+              className={styles.left}
+              onClick={() => {
+                scroll("left");
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="24"
+                viewBox="0 0 34.875 34.875"
+              >
+                <path
+                  id="Icon_awesome-arrow-alt-circle-left"
+                  data-name="Icon awesome-arrow-alt-circle-left"
+                  d="M18,35.438A17.438,17.438,0,1,1,35.438,18,17.434,17.434,0,0,1,18,35.438Zm8.156-20.531H18V9.921a.844.844,0,0,0-1.441-.6L8.522,17.4a.836.836,0,0,0,0,1.188l8.037,8.079a.844.844,0,0,0,1.441-.6V21.094h8.156A.846.846,0,0,0,27,20.25v-4.5A.846.846,0,0,0,26.156,14.906Z"
+                  transform="translate(-0.563 -0.563)"
+                />
+              </svg>
+            </div>
+            <div className={styles.container} ref={carousel}>
+              <div className={`${styles.banner}`}>
+                <img src={collection2019.src} alt="collection 2019" />
+              </div>
+              <div className={styles.banner}>
+                <img src={collection2020.src} alt="collection 2020" />
+              </div>
+              <div className={styles.banner}>
+                <img src={collection2021.src} alt="collection 2021" />
+              </div>
+            </div>
+            <div
+              className={styles.right}
+              onClick={() => {
+                scroll("right");
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 34.875 34.875"
+                style={{ transform: "rotateZ(180deg)" }}
+              >
+                <path
+                  id="Icon_awesome-arrow-alt-circle-left"
+                  data-name="Icon awesome-arrow-alt-circle-left"
+                  d="M18,35.438A17.438,17.438,0,1,1,35.438,18,17.434,17.434,0,0,1,18,35.438Zm8.156-20.531H18V9.921a.844.844,0,0,0-1.441-.6L8.522,17.4a.836.836,0,0,0,0,1.188l8.037,8.079a.844.844,0,0,0,1.441-.6V21.094h8.156A.846.846,0,0,0,27,20.25v-4.5A.846.846,0,0,0,26.156,14.906Z"
+                  transform="translate(-0.563 -0.563)"
+                />
+              </svg>
+            </div>
           </div>
-          <div className={styles.banner}>
-            <img src={collection2021.src} alt="collection 2021" />
-          </div>
-        </div>
+        )}
         <div className={styles["collection-action"]}>
           <button className={styles["browse-collection-button"]}>
             Browse Collections
@@ -117,7 +214,12 @@ export default function Home() {
           </div>
         </div>
         <div className={styles["lookbook-action"]}>
-          <button className={styles["lookbook-button"]} onClick={()=>{router.push('/lookbook')}}>
+          <button
+            className={styles["lookbook-button"]}
+            onClick={() => {
+              router.push("/lookbook");
+            }}
+          >
             Check out our Lookbook
           </button>
         </div>

@@ -5,8 +5,36 @@ import collection from "@/public/images/collectionlookbook.png";
 import Card from "@/components/Card";
 import banner from "@/public/images/lookbookbanner.jpg";
 import shutterstock from "@/public/images/realwomenlookbookbanner.png";
+import { useEffect, useState } from "react";
+import collectionPic1 from "@/public/images/pic1.jpg";
+import collectionPic2 from "@/public/images/pic2.jpg";
+import collectionPic3 from "@/public/images/pic3.jpg";
+import collectionPic4 from "@/public/images/pic4.jpg";
+import collectionPic5 from "@/public/images/pic5.jpg";
+import collectionPic6 from "@/public/images/pic6.jpg";
+import collectionPic7 from "@/public/images/pic7.jpg";
+import collectionPic8 from "@/public/images/pic8.jpg";
+import collectionPic9 from "@/public/images/pic9.jpg";
+import shopzenCollection from '@/public/images/elegant-woman-blue.png'
 
 const lookbook = () => {
+  const [mobileView, setMobileView] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 500) {
+      setMobileView(true);
+    } else {
+      setMobileView(false);
+    }
+    const setDisplay = () => {
+      if (window.innerWidth < 768) {
+        setMobileView(true);
+      } else {
+        setMobileView(false);
+      }
+    };
+    window.addEventListener("resize", setDisplay);
+    return () => window.removeEventListener("resize", setDisplay);
+  }, []);
   return (
     <div>
       <Header />
@@ -49,20 +77,31 @@ const lookbook = () => {
       <div className={styles.categolue}>
         <div className={styles["categolue-title"]}>Categoule</div>
         <div className={styles["categolue-grid"]}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {mobileView ? (
+            <>
+              <Card image={collectionPic1} />
+              <Card image={collectionPic2} />
+              <Card image={collectionPic3} />
+              <Card image={collectionPic4} />
+            </>
+          ) : (
+            <>
+              <Card image={collectionPic1} />
+              <Card image={collectionPic2} />
+              <Card image={collectionPic3} />
+              <Card image={collectionPic4} />
+              <Card image={collectionPic5} />
+              <Card image={collectionPic6} />
+              <Card image={collectionPic7} />
+              <Card image={collectionPic8} />
+              <Card image={collectionPic9} />
+            </>
+          )}
         </div>
       </div>
       <div className={styles.collection2}>
         <div className={styles["collection-image2"]}>
-          <img src={collection.src} />
+          <img src={shopzenCollection.src} />
         </div>
         <div className={styles["collectiontext2"]}>
           <div className={styles["collection-title"]}>

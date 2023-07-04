@@ -2,10 +2,14 @@ import styles from "./Header.module.scss";
 import shopzen from "@/public/images/shopzen.png";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const Header = () => {
-  const  [isNavbarOpen, setIsNavbarOpen]  = useState(false);
+  const navbar = useRef();
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const onLostFocus = () => {
+    console.log(navbar);
+  };
   return (
     <>
       <nav className={styles.navbar}>
@@ -55,7 +59,13 @@ const Header = () => {
         </div>
       </nav>
       {isNavbarOpen && (
-        <div className={styles["navbar-mobile"]}>
+        <div
+          className={styles["navbar-mobile"]}
+          ref={navbar}
+          onClick={() => {
+            setIsNavbarOpen(false);
+          }}
+        >
           <div className={styles.backdrop}>
             <div
               className={styles.close}

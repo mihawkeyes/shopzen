@@ -34,14 +34,14 @@
       img {
         width: 70%;
         object-fit: fill;
-        aspect-ratio: 2;
+        aspect-ratio: 2.2;
       }
     }
     .text {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-      font: normal normal normal 2rem "Lato";
+      font: normal normal normal 1.5rem "Lato";
       letter-spacing: 0px;
       color: #713c25;
       text-align: left;
@@ -163,7 +163,7 @@
         padding-left: 10px;
         width: 50%;
         text-align: left;
-        font: normal normal normal 7rem Lato;
+        font: normal normal normal 6rem Lato;
         letter-spacing: 0px;
         color: #713c25;
       }
@@ -195,10 +195,10 @@
               padding: 10px;
               border: 2px solid #653b29;
               background-color: inherit;
-              font-size: 0.5rem;
+              font-size: 0.9rem;
               max-width: 200px;
               text-align: left;
-              font: normal normal 300 0.75rem Lato;
+              font: normal bold 300 0.75rem Lato;
               color: #853818;
               border-radius: 2px;
               cursor: pointer;
@@ -218,7 +218,7 @@
         .shutterstock-extra-text {
           width: 50%;
           text-align: left;
-          font: normal normal normal 2rem Lato;
+          font: normal normal normal 1.7rem Lato;
           letter-spacing: 0px;
           color: #713c25;
           opacity: 1;

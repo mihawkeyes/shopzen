@@ -6,10 +6,10 @@ const Card = ({image,title,subtitle}) => {
       <div className={styles["card-image"]}>
         <img src={image.src} />
       </div>
-      <div className={styles["card-detail"]}>
+      {/* <div className={styles["card-detail"]}>
         <div className={styles["card-title"]}>{title}</div>
         <div className={styles["card-subtitle"]}>{subtitle}</div>
-      </div>
+      </div> */}
     </div>
   );
 };

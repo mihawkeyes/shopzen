@@ -2,9 +2,11 @@ import styles from "./Header.module.scss";
 import shopzen from "@/public/images/shopzen.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 
 const Header = ({ lookbook }) => {
+  const router = useRouter();
   const navbar = useRef();
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   return (
@@ -25,7 +27,7 @@ const Header = ({ lookbook }) => {
           <button
             className={styles["discover-more-button"]}
             onClick={() => {
-              lookbook?.current?.scrollIntoView({ behavior: "smooth" });
+              router.push("/#discoverMore");
             }}
           >
             Discover more
@@ -93,7 +95,7 @@ const Header = ({ lookbook }) => {
               <button
                 className={styles["discover-more-button"]}
                 onClick={() => {
-                  lookbook?.current?.scrollIntoView({ behavior: "smooth" });
+                  router.push("/#discoverMore");
                 }}
               >
                 Discover more

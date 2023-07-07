@@ -16,7 +16,6 @@ export default function Home() {
   const router = useRouter();
   const [mobileView, setMobileView] = useState(false);
   const carousel = useRef();
-  const lookbook = useRef();
 
   useEffect(() => {
     if (window.innerWidth < 500) {
@@ -42,7 +41,7 @@ export default function Home() {
     ) {
       if (carousel.current.scrollLeft + 185 <= 371) {
         carousel.current.scrollLeft += 185;
-      }else{
+      } else {
         carousel.current.scrollLeft = 371;
       }
     }
@@ -57,7 +56,7 @@ export default function Home() {
 
   return (
     <div className={styles.main}>
-      <Header lookbook={lookbook} />
+      <Header/>
       <div className={styles.header}>
         <div className={styles.banner}>
           <img src={banner.src} alt="For Every Woman Banner" />
@@ -144,7 +143,7 @@ export default function Home() {
           </div>
         )}
         <div className={styles["collection-action"]}>
-          <button className={styles["browse-collection-button"]}>
+          <button className={styles["browse-collection-button"]} onClick={()=>{router.push('/lookbook#categolue')}}>
             Browse Collections
           </button>
         </div>
@@ -170,7 +169,12 @@ export default function Home() {
                 perspectives and inspiring countless others.
               </div>
               <div className={styles["shutterstock-action"]}>
-                <button className={styles["shutterstock-action-button"]}>
+                <button
+                  className={styles["shutterstock-action-button"]}
+                  onClick={() => {
+                    router.push("#discoverMore");
+                  }}
+                >
                   Discover more
                 </button>
               </div>
@@ -191,7 +195,7 @@ export default function Home() {
         <div className={styles["author"]}>Alexander McQueen; designer</div>
         <div className={styles["quote-symbol"]}>"</div>
       </div>
-      <div className={styles.lookbook} ref={lookbook}>
+      <div className={styles.lookbook} id="discoverMore">
         <div className={styles["lookbook-content"]}>
           <div className={styles["lookbook-container"]}>
             <div className={styles["lookbook-text"]}>

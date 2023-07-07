@@ -15,10 +15,12 @@ import collectionPic6 from "@/public/images/pic6.jpg";
 import collectionPic7 from "@/public/images/pic7.jpg";
 import collectionPic8 from "@/public/images/pic8.jpg";
 import collectionPic9 from "@/public/images/pic9.jpg";
-import shopzenCollection from '@/public/images/elegant-woman-blue.png'
+import shopzenCollection from "@/public/images/elegant-woman-blue.png";
+import { useRouter } from "next/router";
 
 const lookbook = () => {
   const [mobileView, setMobileView] = useState(false);
+  const router = useRouter();
   useEffect(() => {
     if (window.innerWidth < 500) {
       setMobileView(true);
@@ -74,27 +76,79 @@ const lookbook = () => {
           <img src={collection.src} />
         </div>
       </div>
-      <div className={styles.categolue}>
+      <div className={styles.categolue} id="categolue">
         <div className={styles["categolue-title"]}>Categoule</div>
         <div className={styles["categolue-grid"]}>
           {mobileView ? (
             <>
-              <Card image={collectionPic1} />
-              <Card image={collectionPic2} />
-              <Card image={collectionPic3} />
-              <Card image={collectionPic4} />
+              <Card
+                image={collectionPic1}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
+              <Card
+                image={collectionPic2}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
+              <Card
+                image={collectionPic3}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
+              <Card
+                image={collectionPic4}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
             </>
           ) : (
             <>
-              <Card image={collectionPic1} />
-              <Card image={collectionPic2} />
-              <Card image={collectionPic3} />
-              <Card image={collectionPic4} />
-              <Card image={collectionPic5} />
-              <Card image={collectionPic6} />
-              <Card image={collectionPic7} />
-              <Card image={collectionPic8} />
-              <Card image={collectionPic9} />
+              <Card
+                image={collectionPic1}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
+              <Card
+                image={collectionPic2}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
+              <Card
+                image={collectionPic3}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
+              <Card
+                image={collectionPic4}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
+              <Card
+                image={collectionPic5}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
+              <Card
+                image={collectionPic6}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
+              <Card
+                image={collectionPic7}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
+              <Card
+                image={collectionPic8}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
+              <Card
+                image={collectionPic9}
+                title={"title"}
+                subtitle={"sub-title"}
+              />
             </>
           )}
         </div>
@@ -135,7 +189,12 @@ const lookbook = () => {
                 whole generation to thrive.
               </div>
               <div className={styles["shutterstock-action"]}>
-                <button className={styles["shutterstock-action-button"]}>
+                <button
+                  className={styles["shutterstock-action-button"]}
+                  onClick={() => {
+                    router.push("/lookbook#categolue");
+                  }}
+                >
                   Browse Collections
                 </button>
               </div>

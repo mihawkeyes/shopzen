@@ -4,12 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
-const Header = () => {
+const Header = ({ lookbook }) => {
   const navbar = useRef();
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const onLostFocus = () => {
-    console.log(navbar);
-  };
   return (
     <>
       <nav className={styles.navbar}>
@@ -25,7 +22,12 @@ const Header = () => {
           <div>
             <Link href="/lookbook">Lookbook</Link>
           </div>
-          <button className={styles["discover-more-button"]}>
+          <button
+            className={styles["discover-more-button"]}
+            onClick={() => {
+              lookbook?.current?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             Discover more
           </button>
         </div>
@@ -88,7 +90,12 @@ const Header = () => {
               <div>
                 <Link href="/contactus">Contact Us</Link>
               </div>
-              <button className={styles["discover-more-button"]}>
+              <button
+                className={styles["discover-more-button"]}
+                onClick={() => {
+                  lookbook?.current?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 Discover more
               </button>
             </div>

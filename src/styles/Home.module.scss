@@ -531,11 +531,15 @@
       }
     }
      .quote {
+      gap: 10px;
       .quote-text {
         font-size: 1rem;
       }
       .author{
         font-size: 0.7rem;
+      }
+      .quote-symbol{
+        font-size: 3rem;
       }
     }
     .lookbook {

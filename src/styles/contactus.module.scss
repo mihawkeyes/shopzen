@@ -154,10 +154,12 @@
 @media screen and (max-width: 700px) {
     .pattern {
     img {
-      height: 1200px;
+      height: 750px;
     }
   }
   .contactus {
+    height: 600px;
+    padding-block: 10%;
     .contactus-title {
       .contactus-title-head {
         font-size: 1rem;
@@ -200,7 +202,7 @@
 @media screen and (max-width: 400px) {
     .pattern {
     img {
-      height: 1100px;
+      // height: 700px;
     }
   }
   .contactus {
